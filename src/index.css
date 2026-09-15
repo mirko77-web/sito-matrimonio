@@ -40,6 +40,13 @@ h1, h2, h3 {
   background-position: center;
   background-attachment: fixed;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
