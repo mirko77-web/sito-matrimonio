@@ -1,0 +1,600 @@
+:root {
+  --colore-principale: #9CAF88;
+  --colore-principale-scuro: #7A8F68;
+  --colore-testo: #4A4A4A;
+  --colore-sfondo: #FFFFFF;
+  --colore-sfondo-alt: #FAF9F6;
+
+  --font-titoli: 'Cormorant Garamond', serif;
+  --font-testo: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-testo);
+  color: var(--colore-testo);
+  background-color: var(--colore-sfondo);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titoli);
+  color: var(--colore-principale-scuro);
+  font-weight: 500;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.hero-titolo {
+  font-family: var(--font-titoli);
+  font-size: 2.4rem;
+  color: rgba(190, 252, 4, 0.758);
+  margin-bottom: 1rem;
+}
+
+.hero-contenuto {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero-data {
+  font-family: var(--font-testo);
+  font-size: 2.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.742);
+  margin-top: 1rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4.2rem;
+}
+
+.hero-citazione {
+  font-family: var(--font-titoli);
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-nomi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.2;
+  gap: 0.3rem;
+}
+
+.hero-e-commerciale {
+  font-size: 0.5em;
+  color: var(--colore-principale);
+  margin: 0.2rem 0;
+}
+
+.hero-data-riga {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-linea {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-data {
+  font-family: var(--font-titoli);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.hero-freccia {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: white;
+  animation: rimbalzo 2s infinite;
+}
+
+@keyframes rimbalzo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+.countdown-titolo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.countdown-titolo-testo {
+  font-family: var(--font-titoli);
+  font-size: 2.4rem;
+  color: var(--colore-principale-scuro);
+}
+
+.countdown-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.countdown-numero {
+  font-family: var(--font-titoli);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--colore-principale-scuro);
+  font-weight: 600;
+}
+
+.countdown-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--colore-testo);
+  margin-top: 0.3rem;
+}
+.nostra-storia,
+.dove-quando {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.nostra-storia h2,
+.dove-quando h2 {
+  margin-bottom: 1.5rem;
+}
+
+.nostra-storia p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.evento {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--colore-sfondo-alt);
+  border-radius: 8px;
+}
+
+.evento h3 {
+  margin-bottom: 0.5rem;
+}
+
+.evento-orario {
+  font-weight: 500;
+  color: var(--colore-principale-scuro);
+}
+
+.evento-mappa {
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.galleria {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.galleria h2 {
+  margin-bottom: 2rem;
+}
+
+.carosello {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carosello-pista {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carosello-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carosello-pallini {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pallino {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #DDD;
+  transition: background-color 0.3s;
+}
+
+.pallino-attivo {
+  background-color: var(--colore-principale);
+}
+.rsvp {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.rsvp h2 {
+  margin-bottom: 2rem;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--colore-testo);
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  font-family: var(--font-testo);
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #DDD;
+  border-radius: 6px;
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+  outline: none;
+  border-color: var(--colore-principale);
+}
+
+.rsvp-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.rsvp-form button {
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--colore-principale);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-testo);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rsvp-form button:hover {
+  background-color: var(--colore-principale-scuro);
+}
+
+.lista-nozze {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: var(--colore-sfondo-alt);
+}
+
+.lista-nozze-iban {
+  margin-top: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--colore-principale-scuro);
+}
+.footer {
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  margin-top: 3rem;
+  background-color: var(--colore-principale-scuro);
+}
+
+.footer-contenuto {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-saluto {
+  font-family: var(--font-titoli);
+  font-size: 1.6rem;
+  color: white;
+}
+
+.footer-hashtag {
+  margin-top: 0.6rem;
+  color: white;
+  opacity: 0.85;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.footer-linea {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 2rem auto;
+}
+
+.footer-contatti {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.85;
+}
+
+.footer-copy {
+  margin-top: 2rem;
+  opacity: 0.5;
+  color: white;
+  font-size: 0.75rem;
+}
+.programma {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.programma h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-pallino {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--colore-principale);
+  border: 2px solid var(--colore-sfondo);
+  box-shadow: 0 0 0 2px var(--colore-principale);
+}
+
+.timeline-orario {
+  font-weight: 600;
+  color: var(--colore-principale-scuro);
+  font-size: 0.95rem;
+}
+
+.timeline-titolo {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+.timeline-linea-sfondo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #E5E5E5;
+}
+
+.timeline-linea-progresso {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  background-color: var(--colore-principale);
+  transition: height 0.1s linear;
+}
+
+.copia-iban-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--colore-principale);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-testo);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copia-iban-btn:hover {
+  background-color: var(--colore-principale-scuro);
+}
+
+.invito-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colore-sfondo-alt);
+  transition: opacity 0.6s ease;
+}
+
+.invito-nascosta {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.busta {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.busta-corpo {
+  position: relative;
+  width: 340px;
+  height: 220px;
+  perspective: 1000px;
+}
+.busta-lettera {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.busta-lettera-testo {
+  font-family: var(--font-titoli);
+  font-size: 1.5rem;
+  color: var(--colore-principale-scuro);
+  letter-spacing: 0.03em;
+}
+
+.busta-risvolto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colore-principale);
+  clip-path: polygon(0 0, 100% 0, 50% 58%);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease-in-out;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invito-apertura .busta-risvolto {
+  transform: rotateX(-180deg);
+}
+
+.busta-istruzione {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--colore-testo);
+  animation: pulsazione 2s infinite;
+}
+
+@keyframes pulsazione {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.busta-sigillo {
+  position: absolute;
+  top: calc(58% - 26px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 52px;
+  z-index: 3;
+}
+
+.busta-sigillo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+.busta-sigillo-simbolo {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.busta-sigillo-testo {
+  font-family: var(--font-titoli);
+  font-size: 0.7rem;
+  color: white;
+  letter-spacing: 0.05em;
+}
