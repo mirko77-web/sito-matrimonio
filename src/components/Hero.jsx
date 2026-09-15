@@ -2,10 +2,8 @@ import sfondoHero from '../assets/matri.jpg'
 
 function Hero() {
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${sfondoHero})` }}
-    >
+    <section className="hero">
+      <img src={sfondoHero} alt="" className="hero-sfondo-img" />
       <div className="hero-overlay"></div>
       <div className="hero-contenuto">
         <p className="hero-eyebrow">Siamo immensamente felici di invitavi al nostro matrimonio</p>
