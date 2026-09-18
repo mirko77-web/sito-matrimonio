@@ -639,3 +639,69 @@ h1, h2, h3 {
   color: white;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.15rem;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .nostra-storia p {
+    font-size: 1.2rem;
+  }
+
+  .evento-orario,
+  .evento-luogo,
+  .evento-indirizzo {
+    font-size: 1.1rem;
+  }
+
+  .countdown-titolo-testo {
+    font-size: 1.8rem;
+  }
+
+  .countdown-numero {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .countdown-label {
+    font-size: 1rem;
+  }
+
+  .timeline-orario,
+  .timeline-titolo {
+    font-size: 1.15rem;
+  }
+
+  .rsvp-form label {
+    font-size: 1.05rem;
+  }
+
+  .rsvp-form input,
+  .rsvp-form select,
+  .rsvp-form textarea,
+  .rsvp-form button {
+    font-size: 1.1rem;
+  }
+
+  .lista-nozze p,
+  .lista-nozze-iban {
+    font-size: 1.1rem;
+  }
+
+  .footer-saluto {
+    font-size: 2rem;
+  }
+
+  .footer-hashtag,
+  .footer-contatti {
+    font-size: 1.05rem;
+  }
+}
