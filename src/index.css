@@ -148,6 +148,31 @@ h1, h2, h3 {
   object-fit: cover;
   z-index: 0;
 }
+
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-citazione {
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .hero-nomi {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+
+  .hero-data {
+    font-size: 1.3rem;
+  }
+
+  .hero-linea {
+    width: 30px;
+  }
+}
+
 @keyframes rimbalzo {
   0%, 100% {
     transform: translateY(0);
