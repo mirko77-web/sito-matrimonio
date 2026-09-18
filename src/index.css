@@ -139,6 +139,15 @@ h1, h2, h3 {
   animation: rimbalzo 2s infinite;
 }
 
+.hero-sfondo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 @keyframes rimbalzo {
   0%, 100% {
     transform: translateY(0);
