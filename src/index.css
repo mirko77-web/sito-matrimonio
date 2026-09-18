@@ -736,3 +736,24 @@ h1, h2, h3 {
   }
 }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    line-height: 1.7;
+    max-width: 330px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-citazione {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    max-width: 340px;
+    margin: 0 auto 2rem;
+  }
+}
