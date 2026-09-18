@@ -1,13 +1,15 @@
 :root {
-  --colore-principale: #9CAF88;
-  --colore-principale-scuro: #7A8F68;
-  --colore-testo: #4A4A4A;
-  --colore-sfondo: #FFFFFF;
-  --colore-sfondo-alt: #FAF9F6;
+  --colore-principale: #9caf88;
+  --colore-principale-scuro: #7a8f68;
+  --colore-testo: #4a4a4a;
+  --colore-sfondo: #ffffff;
+  --colore-sfondo-alt: #faf9f6;
 
-  --font-titoli: 'Cormorant Garamond', serif;
-  --font-testo: 'Montserrat', sans-serif;
+  --font-titoli: "Cormorant Garamond", serif;
+  --font-testo: "Montserrat", sans-serif;
 }
+
+/* Reset */
 
 * {
   margin: 0;
@@ -22,11 +24,16 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-titoli);
   color: var(--colore-principale-scuro);
   font-weight: 500;
 }
+
+/* Hero */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -34,81 +41,78 @@ h1, h2, h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 2rem;
+  overflow: hidden;
+  text-align: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll;
-  }
-}
-
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-.hero-titolo {
-  font-family: var(--font-titoli);
-  font-size: 2.4rem;
-  color: rgba(190, 252, 4, 0.758);
-  margin-bottom: 1rem;
+.hero-sfondo-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-contenuto {
   position: relative;
   z-index: 1;
+  width: min(100%, 700px);
   color: white;
 }
 
-.hero-data {
-  font-family: var(--font-testo);
-  font-size: 2.1rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.742);
-  margin-top: 1rem;
+.hero-titolo {
+  margin-bottom: 1rem;
+  font-family: var(--font-titoli);
+  font-size: 2.4rem;
+  color: rgba(190, 252, 4, 0.758);
 }
 
 .hero-eyebrow {
+  max-width: 520px;
+  margin: 0 auto 4.2rem;
   font-size: 0.85rem;
+  line-height: 1.7;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 4.2rem;
 }
 
 .hero-citazione {
-  font-family: var(--font-titoli);
-  font-style: italic;
-  font-size: 1.2rem;
   max-width: 500px;
   margin: 0 auto 2.5rem;
+  font-family: var(--font-titoli);
+  font-size: 1.2rem;
+  font-style: italic;
   line-height: 1.6;
+  color: white;
 }
 
 .hero-nomi {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.3rem;
   color: white;
   font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1.2;
-  gap: 0.3rem;
 }
 
 .hero-e-commerciale {
+  margin: 0.2rem 0;
   font-size: 0.5em;
   color: var(--colore-principale);
-  margin: 0.2rem 0;
 }
 
 .hero-data-riga {
@@ -129,6 +133,7 @@ h1, h2, h3 {
   font-family: var(--font-titoli);
   font-size: 1.1rem;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: white;
 }
 
@@ -139,60 +144,31 @@ h1, h2, h3 {
   animation: rimbalzo 2s infinite;
 }
 
-.hero-sfondo-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-@media (max-width: 480px) {
-  .hero-eyebrow {
-    font-size: 1.2rem;
-    letter-spacing: 0.15em;
-  }
-
-  .hero-citazione {
-    font-size: 1.7rem;
-    max-width: 95%;
-  }
-
-  .hero-nomi {
-    font-size: clamp(3.5rem, 15vw, 4.8rem);
-  }
-
-  .hero-data {
-    font-size: 1.6rem;
-  }
-
-  .hero-linea {
-    width: 25px;
-  }
-}
-
 @keyframes rimbalzo {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
 }
+
+/* Countdown */
+
 .countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   padding: 3rem 1rem;
-  flex-wrap: wrap;
 }
 
 .countdown-titolo {
   width: 100%;
-  text-align: center;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .countdown-titolo-testo {
@@ -211,17 +187,20 @@ h1, h2, h3 {
 .countdown-numero {
   font-family: var(--font-titoli);
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--colore-principale-scuro);
   font-weight: 600;
+  color: var(--colore-principale-scuro);
 }
 
 .countdown-label {
+  margin-top: 0.3rem;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--colore-testo);
-  margin-top: 0.3rem;
 }
+
+/* Storia e luogo */
+
 .nostra-storia,
 .dove-quando {
   max-width: 700px;
@@ -261,6 +240,72 @@ h1, h2, h3 {
   border-radius: 8px;
 }
 
+/* Programma */
+
+.programma {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.programma h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-linea-sfondo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: #e5e5e5;
+}
+
+.timeline-linea-progresso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  background-color: var(--colore-principale);
+  transition: height 0.1s linear;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-pallino {
+  position: absolute;
+  top: 0.3rem;
+  left: -2.4rem;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--colore-sfondo);
+  border-radius: 50%;
+  background-color: var(--colore-principale);
+  box-shadow: 0 0 0 2px var(--colore-principale);
+}
+
+.timeline-orario {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--colore-principale-scuro);
+}
+
+.timeline-titolo {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+/* Galleria */
+
 .galleria {
   max-width: 1000px;
   margin: 0 auto;
@@ -276,8 +321,8 @@ h1, h2, h3 {
   position: relative;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
   aspect-ratio: 4 / 3;
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -290,10 +335,10 @@ h1, h2, h3 {
 }
 
 .carosello-foto {
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
 }
 
 .carosello-pallini {
@@ -307,13 +352,16 @@ h1, h2, h3 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #DDD;
+  background-color: #ddd;
   transition: background-color 0.3s;
 }
 
 .pallino-attivo {
   background-color: var(--colore-principale);
 }
+
+/* RSVP */
+
 .rsvp {
   max-width: 500px;
   margin: 0 auto;
@@ -343,13 +391,13 @@ h1, h2, h3 {
 .rsvp-form input,
 .rsvp-form select,
 .rsvp-form textarea {
-  font-family: var(--font-testo);
-  font-size: 1rem;
   padding: 0.6rem 0.8rem;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   border-radius: 6px;
   background-color: var(--colore-sfondo);
   color: var(--colore-testo);
+  font-family: var(--font-testo);
+  font-size: 1rem;
 }
 
 .rsvp-form input:focus,
@@ -367,10 +415,10 @@ h1, h2, h3 {
 .rsvp-form button {
   margin-top: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: var(--colore-principale);
-  color: white;
   border: none;
   border-radius: 6px;
+  background-color: var(--colore-principale);
+  color: white;
   font-family: var(--font-testo);
   font-size: 1rem;
   cursor: pointer;
@@ -380,6 +428,8 @@ h1, h2, h3 {
 .rsvp-form button:hover {
   background-color: var(--colore-principale-scuro);
 }
+
+/* Lista nozze */
 
 .lista-nozze {
   max-width: 600px;
@@ -395,10 +445,30 @@ h1, h2, h3 {
   letter-spacing: 0.05em;
   color: var(--colore-principale-scuro);
 }
+
+.copia-iban-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--colore-principale);
+  color: white;
+  font-family: var(--font-testo);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copia-iban-btn:hover {
+  background-color: var(--colore-principale-scuro);
+}
+
+/* Footer */
+
 .footer {
-  text-align: center;
-  padding: 5rem 1.5rem 3rem;
   margin-top: 3rem;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
   background-color: var(--colore-principale-scuro);
 }
 
@@ -415,17 +485,17 @@ h1, h2, h3 {
 
 .footer-hashtag {
   margin-top: 0.6rem;
-  color: white;
-  opacity: 0.85;
   font-style: italic;
   letter-spacing: 0.05em;
+  color: white;
+  opacity: 0.85;
 }
 
 .footer-linea {
   width: 40px;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.4);
   margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .footer-contatti {
@@ -439,87 +509,12 @@ h1, h2, h3 {
 
 .footer-copy {
   margin-top: 2rem;
-  opacity: 0.5;
-  color: white;
   font-size: 0.75rem;
-}
-.programma {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-.programma h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.timeline-pallino {
-  position: absolute;
-  left: -2.4rem;
-  top: 0.3rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--colore-principale);
-  border: 2px solid var(--colore-sfondo);
-  box-shadow: 0 0 0 2px var(--colore-principale);
-}
-
-.timeline-orario {
-  font-weight: 600;
-  color: var(--colore-principale-scuro);
-  font-size: 0.95rem;
-}
-
-.timeline-titolo {
-  margin-top: 0.2rem;
-  font-size: 1rem;
-}
-.timeline-linea-sfondo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #E5E5E5;
-}
-
-.timeline-linea-progresso {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2px;
-  background-color: var(--colore-principale);
-  transition: height 0.1s linear;
-}
-
-.copia-iban-btn {
-  margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
-  background-color: var(--colore-principale);
   color: white;
-  border: none;
-  border-radius: 6px;
-  font-family: var(--font-testo);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  opacity: 0.5;
 }
 
-.copia-iban-btn:hover {
-  background-color: var(--colore-principale-scuro);
-}
+/* Overlay invito */
 
 .invito-overlay {
   position: fixed;
@@ -534,16 +529,16 @@ h1, h2, h3 {
 }
 
 .invito-nascosta {
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
 }
 
 .busta {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  cursor: pointer;
 }
 
 .busta-corpo {
@@ -552,41 +547,42 @@ h1, h2, h3 {
   height: 220px;
   perspective: 1000px;
 }
+
 .busta-lettera {
   position: absolute;
   inset: 0;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 0.5rem;
-  z-index: 1;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 .busta-lettera-testo {
   font-family: var(--font-titoli);
   font-size: 1.5rem;
-  color: var(--colore-principale-scuro);
   letter-spacing: 0.03em;
+  color: var(--colore-principale-scuro);
 }
 
 .busta-risvolto {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: var(--colore-principale);
   clip-path: polygon(0 0, 100% 0, 50% 58%);
   transform-origin: top center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition: transform 0.8s ease-in-out;
-  z-index: 2;
+  background-color: var(--colore-principale);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease-in-out;
 }
 
 .invito-apertura .busta-risvolto {
@@ -601,23 +597,14 @@ h1, h2, h3 {
   animation: pulsazione 2s infinite;
 }
 
-@keyframes pulsazione {
-  0%, 100% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 .busta-sigillo {
   position: absolute;
   top: calc(58% - 26px);
   left: 50%;
-  transform: translateX(-50%);
+  z-index: 3;
   width: 52px;
   height: 52px;
-  z-index: 3;
+  transform: translateX(-50%);
 }
 
 .busta-sigillo-img {
@@ -636,124 +623,176 @@ h1, h2, h3 {
 .busta-sigillo-testo {
   font-family: var(--font-titoli);
   font-size: 0.7rem;
-  color: white;
   letter-spacing: 0.05em;
+  color: white;
 }
+
+@keyframes pulsazione {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Tablet e mobile */
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 480px) {
   body {
-    font-size: 0.85rem; /* invece di 1.15rem */
+    font-size: 0.95rem;
   }
 
   h2 {
-    font-size: 1rem !important; /* invece di 2.2rem */
+    font-size: 1.8rem;
   }
 
   h3 {
-    font-size: 1rem !important; /* invece di 1.5rem */
+    font-size: 1.35rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-titolo {
+    font-size: 1.6rem;
+  }
+
+  .hero-eyebrow {
+    max-width: 340px;
+    margin-bottom: 2.8rem;
+    font-size: 0.68rem;
+    line-height: 1.65;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-citazione {
+    max-width: 340px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-nomi {
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
+    line-height: 1.15;
+  }
+
+  .hero-e-commerciale {
+    margin: 0.1rem 0;
+  }
+
+  .hero-data-riga {
+    gap: 0.7rem;
+    margin-top: 1.7rem;
+  }
+
+  .hero-data {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-linea {
+    width: 25px;
+  }
+
+  .hero-freccia {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .countdown {
+    gap: 1.2rem;
+    padding: 2.5rem 1rem;
+  }
+
+  .countdown-titolo-testo {
+    font-size: 1.7rem;
+  }
+
+  .countdown-numero {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+
+  .countdown-label {
+    font-size: 0.75rem;
+  }
+
+  .nostra-storia,
+  .dove-quando,
+  .programma,
+  .galleria,
+  .rsvp,
+  .lista-nozze {
+    padding: 3rem 1.25rem;
   }
 
   .nostra-storia p {
-    font-size: 1rem; /* invece di 1.2rem */
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .evento {
+    padding: 1.25rem 1rem;
   }
 
   .evento-orario,
   .evento-luogo,
   .evento-indirizzo {
-    font-size: 0.95rem; /* invece di 1.1rem */
-  }
-
-  .countdown-titolo-testo {
-    font-size: 1.5rem; /* invece di 1.8rem */
-  }
-
-  .countdown-numero {
-    font-size: clamp(1.5rem, 10vw, 2.5rem); /* valori più bassi */
-  }
-
-  .countdown-label {
-    font-size: 0.85rem; /* invece di 1rem */
+    font-size: 0.95rem;
   }
 
   .timeline-orario,
   .timeline-titolo {
-    font-size: 1rem; /* invece di 1.15rem */
+    font-size: 0.95rem;
   }
 
   .rsvp-form label {
-    font-size: 0.95rem; /* invece di 1.05rem */
+    font-size: 0.9rem;
   }
 
   .rsvp-form input,
   .rsvp-form select,
   .rsvp-form textarea,
   .rsvp-form button {
-    font-size: 1rem; /* invece di 1.1rem */
+    font-size: 1rem;
   }
 
   .lista-nozze p,
   .lista-nozze-iban {
-    font-size: 1rem; /* invece di 1.1rem */
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 3.5rem 1.25rem 2.5rem;
   }
 
   .footer-saluto {
-    font-size: 1.6rem; /* invece di 2rem */
+    font-size: 1.6rem;
   }
 
   .footer-hashtag,
   .footer-contatti {
-    font-size: 0.95rem; /* invece di 1.05rem */
-  }
-  @media (max-width: 480px) {
-  /* ... le regole di sopra ... */
-
-  .hero-titolo {
-    font-size: 1.6rem; /* invece di 2.4rem */
+    font-size: 0.9rem;
   }
 
-  .hero-citazione {
-    font-size: 0.70rem; /* invece di 1.7rem */
+  .busta-corpo {
+    width: min(340px, calc(100vw - 2rem));
+    height: auto;
+    aspect-ratio: 340 / 220;
   }
 
-  .hero-nomi {
-    font-size: clamp(2.2rem, 10vw, 3.5rem); /* invece di 3.5–4.8rem */
-  }
-
-  .hero-data {
-    font-size: 1.1rem; /* invece di 1.6rem */
-  }
-
-  .hero-eyebrow {
-    font-size: 0.55rem; /* invece di 1.2rem */
-    letter-spacing: 0.12em;
-  }
-
-  .evento h3 {
-    font-size: 1.2rem; /* ad esempio */
-  }
-
-  .programma h2 {
-    font-size: 1.6rem; /* ad esempio */
-  }
-}
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 1.5rem 1rem;
-  }
-
-  .hero-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.16em;
-    line-height: 1.7;
-    max-width: 330px;
-    margin-bottom: 3rem;
-  }
-
-  .hero-citazione {
-    font-size: 1.15rem;
-    line-height: 1.55;
-    max-width: 340px;
-    margin: 0 auto 2rem;
+  .busta-lettera-testo {
+    font-size: 1.3rem;
   }
 }
