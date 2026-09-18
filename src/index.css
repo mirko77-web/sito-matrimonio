@@ -151,25 +151,25 @@ h1, h2, h3 {
 
 @media (max-width: 480px) {
   .hero-eyebrow {
-    font-size: 1rem;
-    letter-spacing: 0.2em;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
   }
 
   .hero-citazione {
-    font-size: 1.4rem;
-    max-width: 90%;
+    font-size: 1.7rem;
+    max-width: 95%;
   }
 
   .hero-nomi {
-    font-size: clamp(3rem, 12vw, 4rem);
+    font-size: clamp(3.5rem, 15vw, 4.8rem);
   }
 
   .hero-data {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .hero-linea {
-    width: 30px;
+    width: 25px;
   }
 }
 
