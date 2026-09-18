@@ -639,69 +639,100 @@ h1, h2, h3 {
   color: white;
   letter-spacing: 0.05em;
 }
-
 @media (max-width: 480px) {
   body {
-    font-size: 1.15rem;
+    font-size: 1rem; /* invece di 1.15rem */
   }
 
   h2 {
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important; /* invece di 2.2rem */
   }
 
   h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important; /* invece di 1.5rem */
   }
 
   .nostra-storia p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* invece di 1.2rem */
   }
 
   .evento-orario,
   .evento-luogo,
   .evento-indirizzo {
-    font-size: 1.1rem;
+    font-size: 0.95rem; /* invece di 1.1rem */
   }
 
   .countdown-titolo-testo {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* invece di 1.8rem */
   }
 
   .countdown-numero {
-    font-size: clamp(2.5rem, 13vw, 4rem);
+    font-size: clamp(2rem, 11vw, 3.2rem); /* valori più bassi */
   }
 
   .countdown-label {
-    font-size: 1rem;
+    font-size: 0.85rem; /* invece di 1rem */
   }
 
   .timeline-orario,
   .timeline-titolo {
-    font-size: 1.15rem;
+    font-size: 1rem; /* invece di 1.15rem */
   }
 
   .rsvp-form label {
-    font-size: 1.05rem;
+    font-size: 0.95rem; /* invece di 1.05rem */
   }
 
   .rsvp-form input,
   .rsvp-form select,
   .rsvp-form textarea,
   .rsvp-form button {
-    font-size: 1.1rem;
+    font-size: 1rem; /* invece di 1.1rem */
   }
 
   .lista-nozze p,
   .lista-nozze-iban {
-    font-size: 1.1rem;
+    font-size: 1rem; /* invece di 1.1rem */
   }
 
   .footer-saluto {
-    font-size: 2rem;
+    font-size: 1.6rem; /* invece di 2rem */
   }
 
   .footer-hashtag,
   .footer-contatti {
-    font-size: 1.05rem;
+    font-size: 0.95rem; /* invece di 1.05rem */
   }
+  @media (max-width: 480px) {
+  /* ... le regole di sopra ... */
+
+  .hero-titolo {
+    font-size: 1.6rem; /* invece di 2.4rem */
+  }
+
+  .hero-citazione {
+    font-size: 1rem; /* invece di 1.7rem */
+  }
+
+  .hero-nomi {
+    font-size: clamp(2.2rem, 10vw, 3.5rem); /* invece di 3.5–4.8rem */
+  }
+
+  .hero-data {
+    font-size: 1.1rem; /* invece di 1.6rem */
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem; /* invece di 1.2rem */
+    letter-spacing: 0.12em;
+  }
+
+  .evento h3 {
+    font-size: 1.2rem; /* ad esempio */
+  }
+
+  .programma h2 {
+    font-size: 1.6rem; /* ad esempio */
+  }
+}
 }
