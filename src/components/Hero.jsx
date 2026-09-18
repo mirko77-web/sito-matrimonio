@@ -8,7 +8,7 @@ function Hero() {
     >
       <div className="hero-overlay"></div>
       <div className="hero-contenuto">
-        <p className="hero-eyebrow">Siamo immensamente felici di invitarvi al nostro matrimonio</p>
+        <p className="hero-eyebrow">  TEST CSS FUNZIONA</p>
         <p className="hero-citazione">
         Quando la felicità di qualcun altro è la tua felicità, quello è amore.
         </p>
