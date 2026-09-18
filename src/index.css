@@ -641,15 +641,15 @@ h1, h2, h3 {
 }
 @media (max-width: 480px) {
   body {
-    font-size: 1rem; /* invece di 1.15rem */
+    font-size: 0.85rem; /* invece di 1.15rem */
   }
 
   h2 {
-    font-size: 1.8rem !important; /* invece di 2.2rem */
+    font-size: 1rem !important; /* invece di 2.2rem */
   }
 
   h3 {
-    font-size: 1.3rem !important; /* invece di 1.5rem */
+    font-size: 1rem !important; /* invece di 1.5rem */
   }
 
   .nostra-storia p {
