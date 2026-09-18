@@ -796,3 +796,14 @@ h3 {
     font-size: 1.3rem;
   }
 }
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    font-size: 0.4rem !important;
+    color: red !important;
+  }
+
+  .hero-citazione {
+    font-size: 0.6rem !important;
+    color: yellow !important;
+  }
+}
