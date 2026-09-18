@@ -671,7 +671,7 @@ h3 {
   .hero-eyebrow {
     max-width: 340px;
     margin-bottom: 2.8rem;
-    font-size: 0.68rem;
+    font-size: 0.40rem;
     line-height: 1.65;
     letter-spacing: 0.13em;
   }
@@ -679,7 +679,7 @@ h3 {
   .hero-citazione {
     max-width: 340px;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 0.60rem;
     line-height: 1.5;
   }
 
