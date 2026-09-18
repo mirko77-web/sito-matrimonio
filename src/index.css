@@ -667,7 +667,7 @@ h1, h2, h3 {
   }
 
   .countdown-numero {
-    font-size: clamp(2rem, 11vw, 3.2rem); /* valori più bassi */
+    font-size: clamp(1.5rem, 10vw, 2.5rem); /* valori più bassi */
   }
 
   .countdown-label {
@@ -711,7 +711,7 @@ h1, h2, h3 {
   }
 
   .hero-citazione {
-    font-size: 1rem; /* invece di 1.7rem */
+    font-size: 0.70rem; /* invece di 1.7rem */
   }
 
   .hero-nomi {
@@ -723,7 +723,7 @@ h1, h2, h3 {
   }
 
   .hero-eyebrow {
-    font-size: 0.75rem; /* invece di 1.2rem */
+    font-size: 0.55rem; /* invece di 1.2rem */
     letter-spacing: 0.12em;
   }
 
